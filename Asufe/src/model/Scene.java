@@ -5,18 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Scene {
+	private int id;
     private String text;
     private List<Action> actions;
-    private boolean winningScene;
+    private SceneState sceneState;
 
-    public Scene(String text) {
+    public Scene(String text, SceneState state) {
         this.text = text;
-        actions = new ArrayList<>();
-    }
-
-    public Scene(String text, boolean winning) {
-        this.text = text;
-        winningScene = winning;
+        sceneState = state;
     }
 
     public void addAction(Action a) {
@@ -31,4 +27,5 @@ public class Scene {
     public String toString() {
         return "";
     }
+    
 }
