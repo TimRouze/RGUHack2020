@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "text": "Mich'mich is laying down on the sidewalk, alone.. It's raining and a heavy wind blows.\nIt's 4pm and John, a 9 years old boy is coming, accompanied by what seems to be his older brother, Jude, after a long day of school.\nBoth boys look excited, this sensation enhanced by the rain and the younger one is jumping into puddles. Suddenly, his eyes stop on our poor heroe.\nWhat is happening?",
+        "actions": [ 
+            {
+                "nextScene": "2",
+                "inputs": ["take", "take the plush", "take it"],
+                "damages": "0"
+            },
+            {
+                "nextScene": "3",
+                "inputs": ["leave the plush", "leave it"],
+                "damages": "0"
+            },
+            {
+                "nextScene": "4",
+                "inputs": ["jump on the plush", "jump on it", "jump"],
+                "damages": "0"
+            }
+        ],
+        "sceneState": "NEUTRAL"
+        
+    },
+    {
+        "id": "2",
+        "text": "Oh great, poor Mich'mich is not alone anymore! Our two little boys are going back home with their new friend.\nDuring the dinner, John presents his parents their marvelous find. But Mich'mich is still wet and his beautiful fur, which once was white and cream, is now dirty and grey.\nJohn and Jude's mother enters in a terrible fury: \"You must not pick up random stuff in the streets, even if it looks abandoned and pretty. You don't know where it comes from,\nand it can belong to someone who lost it. Tomorrow I want you both to put it back where you found it\".\nDisappointed, John goes to bed. After a good night and a delicious breakfast, the brothers head to the school and stop to the place they found Mich'mich the day before.\nWhat is happening?",
+        "actions": [ 
+            {
+                "nextScene": "5",
+                "inputs": ["put back", "put it back", "put the plush back", "leave the plush", "leave it"],
+                "damages": "0"
+            },
+            {
+                "nextScene": "6",
+                "inputs": ["keep", "keep it", "keep the plush"],
+                "damages": "0"
+            }
+        ],
+        "sceneState": "NEUTRAL"
+    }
+]

@@ -10,9 +10,10 @@ public class Scene {
     private List<Action> actions;
     private SceneState sceneState;
 
-    public Scene(String text, SceneState state) {
+    public Scene(int id, String text, SceneState sceneState) {
+        this.id = id;
         this.text = text;
-        sceneState = state;
+        this.sceneState = sceneState;
     }
 
     public void addAction(Action a) {
@@ -25,7 +26,7 @@ public class Scene {
 
     @Override
     public String toString() {
-        return "";
+        return id + "\n" + text + "\n" + sceneState;
     }
     
 }

@@ -14,7 +14,8 @@ public class Main {
     public static void main(String[] args) {
     	Player michmich = new Player("Mich'mich", 10);
     	System.out.println("My name is: " + michmich.getName());
-        
+    	scenes = JSONLoader.getScenes("resources/Scenes.json");
+        System.out.println(scenes);
     }
 
     public static String readAction() {
