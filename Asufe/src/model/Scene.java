@@ -5,24 +5,26 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Scene {
-    public Text text;
-    public List<Scene> nextScenes;
+    private String text;
+    private List<Action> actions;
+    private boolean winningScene;
 
-    public Scene(Text text) {
+    public Scene(String text) {
         this.text = text;
-        nextScenes = new ArrayList<>();
+        actions = new ArrayList<>();
     }
 
-    public Scene(Text text, boolean winnigScene) {
+    public Scene(String text, boolean winning) {
         this.text = text;
+        winningScene = winning;
     }
 
-    public void addScene(Scene s) {
-        nextScenes.add(s);
+    public void addAction(Action a) {
+    	actions.add(a);
     }
 
-    public void addScene(Scene[] scenes) {
-        nextScenes.addAll(Arrays.asList(scenes));
+    public void addAction(Action[] nActions) {
+        actions.addAll(Arrays.asList(nActions));
     }
 
     @Override

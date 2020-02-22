@@ -5,7 +5,19 @@ public class Player {
     private int hp;
     private boolean win;
 
-    public Player(String name, int hp) {
+    public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getHp() {
+		return hp;
+	}
+
+	public Player(String name, int hp) {
         this.name = name;
         this.hp = hp;
         win = false;

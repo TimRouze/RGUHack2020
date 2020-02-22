@@ -1,21 +1,41 @@
 package model;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.List;
 
 public class Action {
-    public static Scanner sc = new Scanner(System.in);
+	private int damages;
+	private List<String> inputs;
+	private Scene nextScene;
+	
+	Action(int dmg, List<String> inpt, Scene nScene){
+		damages = dmg;
+		inputs = inpt;
+		nextScene = nScene;
+	}
 
-    public static String readAction() {
-        String res;
-        while(true) {
-            try {
-                res = sc.nextLine();
-                break;
-            } catch(InputMismatchException e) {
-                sc.next();
-            }
-        }
-        return res;
-    }
+	public int getDamages() {
+		return damages;
+	}
+
+	public void setDamages(int damages) {
+		this.damages = damages;
+	}
+
+	public List<String> getInputs() {
+		return inputs;
+	}
+
+	public void setInputs(List<String> inputs) {
+		this.inputs = inputs;
+	}
+
+	public Scene getNextScene() {
+		return nextScene;
+	}
+
+	public void setNextScene(Scene nextScene) {
+		this.nextScene = nextScene;
+	}
+	
+	
 }
