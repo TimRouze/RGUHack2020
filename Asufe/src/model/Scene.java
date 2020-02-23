@@ -57,8 +57,6 @@ public class Scene {
     }
     @Override
     public String toString() {
-    	String stringText = "------------------------------------------------------------------------------------------------------\n";
-    	stringText += id + "\n" + text + "\n";
-        return stringText;
+        return text + "\n";
     }
 }
