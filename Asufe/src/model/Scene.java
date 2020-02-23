@@ -7,13 +7,15 @@ import java.util.List;
 public class Scene {
 	private int id;
     private String text;
-    private List<Action> actions;
     private SceneState sceneState;
+    private boolean conditioned;
+    private List<Action> actions;
 
-    public Scene(int id, String text, SceneState sceneState) {
+    public Scene(int id, String text, SceneState sceneState, boolean conditioned) {
         this.id = id;
         this.text = text;
         this.sceneState = sceneState;
+        this.conditioned = conditioned;
         actions = new ArrayList<>();
     }
     
@@ -46,14 +48,17 @@ public class Scene {
     	return id;
     }
 
+    public boolean isConditioned() {
+        return conditioned;
+    }
+
     public SceneState getSceneState() {
     	return sceneState;
     }
     @Override
     public String toString() {
     	String stringText = "------------------------------------------------------------------------------------------------------\n";
-    	stringText += "\n" + text + "\n";
+    	stringText += id + "\n" + text + "\n";
         return stringText;
     }
-    
 }
