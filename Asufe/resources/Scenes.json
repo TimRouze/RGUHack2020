@@ -21,7 +21,6 @@
         ],
         "sceneState": "NEUTRAL",
         "conditioned": false
-        
     },
     {
         "id": "2",
@@ -43,7 +42,7 @@
     },
     {
         "id": "5",
-        "text": "Heartbroken, John puts Mich'mich on a small wall and they leave. Once again, the poor \nlittle sheep is alone. Unfortunately, this day is garbage collection day. At 10am the waste \ntruck comes and the plush is taken into the waste disposal by the driver. Mich’mich is \ndrowned under tons of waste and is crushed. The damage is too great. He will never recover \nand joins plush Heaven."
+        "text": "Heartbroken, John puts Mich'mich on a small wall and they leave. Once again, the poor \nlittle sheep is alone. Unfortunately, this day is garbage collection day. At 10am the waste \ntruck comes and the plush is taken into the waste disposal by the driver. Mich’mich is \ndrowned under tons of waste and is crushed. The damage is too great. He will never recover \nand joins plush Heaven.",
         "actions": [
             {
                 "nextScene": "-1",
@@ -143,7 +142,7 @@
     },
     {
         "id": "9",
-        "text": "The following morning, Isaac and his mother are going to the boy’s school. On their road, \nthey find the little plush which seems to have suffered. Isaac’s mother is the tender of \nNational Plush Shelter of this neighbourhood, so she decides to take Mich’mich to the \nshelter to find him a new home. \n"
+        "text": "The following morning, Isaac and his mother are going to the boy’s school. On their road, \nthey find the little plush which seems to have suffered. Isaac’s mother is the tender of \nNational Plush Shelter of this neighbourhood, so she decides to take Mich’mich to the \nshelter to find him a new home. \n",
         "actions": [
             {
                 "nextScene": "12",

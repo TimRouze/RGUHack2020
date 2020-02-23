@@ -34,8 +34,6 @@ public class JSONLoader {
                     ((JSONArray)action.get("inputs")).forEach(input -> {
                         inputs.add((String)input);
                     });
-                    System.out.println(inputs.get(0));
-                    System.out.println(new Action(dmg, inputs, nextScene));
                     scene.addAction(new Action(dmg, inputs, nextScene));
                 });
                 scenes.add(scene);
