@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "text": "Mich'mich is laying down on the sidewalk, alone.. It's raining and a heavy wind blows.\nIt's 4pm and John, a 9 years old boy is coming, accompanied by what seems to be his older brother, Jude, after a long day of school.\nBoth boys look excited, this sensation enhanced by the rain and the younger one is jumping into puddles. Suddenly, his eyes stop on our poor heroe.\nWhat is happening?",
+        "text": "Mich'mich is laying down on the sidewalk, alone.. It's raining and a heavy wind blows.\nIt's 4pm and John, a 9 years old boy is coming, accompanied by what seems to be his older brother, Lenon, after a long day of school.\nBoth boys look excited, this sensation enhanced by the rain and the younger one is jumping into puddles. Suddenly, his eyes stop on our poor heroe.\nWhat is happening?",
         "actions": [ 
             {
                 "nextScene": "2",
@@ -10,7 +10,7 @@
             },
             {
                 "nextScene": "3",
-                "inputs": ["leave the plush", "leave it"],
+                "inputs": ["leave the plush", "leave it", "leave"],
                 "damages": "0"
             },
             {
@@ -19,8 +19,7 @@
                 "damages": "0"
             }
         ],
-        "sceneState": "NEUTRAL"
-        
+        "sceneState": "NEUTRAL"        
     },
     {
         "id": "2",

@@ -46,9 +46,14 @@ public class Scene {
     	return id;
     }
 
+    public SceneState getSceneState() {
+    	return sceneState;
+    }
     @Override
     public String toString() {
-        return id + "\n" + text + "\n" + sceneState;
+    	String stringText = "------------------------------------------------------------------------------------------------------\n";
+    	stringText += "\n" + text + "\n";
+        return stringText;
     }
     
 }

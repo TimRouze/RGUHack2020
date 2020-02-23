@@ -31,4 +31,8 @@ public class Game {
 		return currentScene.getId();
 	}
 	
+	public Scene getCurrentScene() {
+		return currentScene;
+	}
+	
 }
