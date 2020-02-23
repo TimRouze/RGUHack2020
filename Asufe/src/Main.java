@@ -9,25 +9,20 @@ import java.util.Scanner;
 
 public class Main {
     static List<Scene> scenes = new ArrayList<>();
-    public static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-    	Player michmich = new Player("Mich'mich", 10);
-    	System.out.println("My name is: " + michmich.getName());
     	scenes = JSONLoader.getScenes("resources/Scenes.json");
-        System.out.println(scenes);
-    }
-
-    public static String readAction() {
-        String res;
-        while(true) {
-            try {
-                res = sc.nextLine();
-                break;
-            } catch(InputMismatchException e) {
-                sc.next();
-            }
-        }
-        return res;
+    	Scene intro = JSONLoader.getIntro("resources/intro.json");
+    	Game game = new Game(new Player("Mich'mich", 10), scenes.get(0));
+    	System.out.println("------------------------------------------------------------------------------------------------------");
+    	System.out.println(intro.getText());
+    	System.out.println("------------------------------------------------------------------------------------------------------");
+    	System.out.println(scenes.get(0).getText());
+    	System.out.print(">");
+    	int newSceneId = game.getPlayerInput();
+    	System.out.println(newSceneId);
+    	System.out.println("------------------------------------------------------------------------------------------------------");
+    	System.out.println(scenes.get(newSceneId-1).getText());
+    	System.out.println("------------------------------------------------------------------------------------------------------");
     }
 }

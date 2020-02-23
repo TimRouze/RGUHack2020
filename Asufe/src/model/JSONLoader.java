@@ -4,6 +4,10 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import model.Action;
+import model.Scene;
+import model.SceneState;
+
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +34,8 @@ public class JSONLoader {
                     ((JSONArray)action.get("inputs")).forEach(input -> {
                         inputs.add((String)input);
                     });
+                    System.out.println(inputs.get(0));
+                    System.out.println(new Action(dmg, inputs, nextScene));
                     scene.addAction(new Action(dmg, inputs, nextScene));
                 });
                 scenes.add(scene);
@@ -40,4 +46,18 @@ public class JSONLoader {
 
         return scenes;
     }
+    
+    public static Scene getIntro(String path) {
+        Scene scene = new Scene();
+        JSONParser jsonParser = new JSONParser();
+        try {
+         Object object = jsonParser.parse(new FileReader(path));
+         JSONObject jsonObject = (JSONObject) object;
+         scene.setText((String)jsonObject.get("text"));
+        } catch(Exception e) {
+         e.printStackTrace();
+        }
+        return scene;
+       }
+
 }

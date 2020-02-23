@@ -24,7 +24,7 @@
     },
     {
         "id": "2",
-        "text": "Oh great, poor Mich'mich is not alone anymore! Our two little boys are going back home with their new friend.\nDuring the dinner, John presents his parents their marvelous find. But Mich'mich is still wet and his beautiful fur, which once was white and cream, is now dirty and grey.\nJohn and Jude's mother enters in a terrible fury: \"You must not pick up random stuff in the streets, even if it looks abandoned and pretty. You don't know where it comes from,\nand it can belong to someone who lost it. Tomorrow I want you both to put it back where you found it\".\nDisappointed, John goes to bed. After a good night and a delicious breakfast, the brothers head to the school and stop to the place they found Mich'mich the day before.\nWhat is happening?",
+        "text": "Oh great, poor Mich'mich is not alone anymore! Our two little boys are going back home with their new friend.\nDuring the dinner, John presents his parents their marvelous find. But Mich'mich is still wet and his beautiful fur, which once was white and cream, is now dirty and grey.\nJohn and Lennon's mother enters in a terrible fury: \"You must not pick up random stuff in the streets, even if it looks abandoned and pretty. You don't know where it comes from,\nand it can belong to someone who lost it. Tomorrow I want you both to put it back where you found it\".\nDisappointed, John goes to bed. After a good night and a delicious breakfast, the brothers head to the school and stop to the place they found Mich'mich the day before.\nWhat will the boys do?",
         "actions": [ 
             {
                 "nextScene": "5",
@@ -33,7 +33,7 @@
             },
             {
                 "nextScene": "6",
-                "inputs": ["keep", "keep it", "keep the plush"],
+                "inputs": ["keep", "keep it", "keep the plush", "keep Mich'mich"],
                 "damages": "0"
             }
         ],

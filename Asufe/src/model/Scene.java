@@ -14,14 +14,36 @@ public class Scene {
         this.id = id;
         this.text = text;
         this.sceneState = sceneState;
+        actions = new ArrayList<>();
+    }
+    
+    public Scene() {
+    	id = 0;
+    	sceneState = SceneState.NEUTRAL;
     }
 
     public void addAction(Action a) {
     	actions.add(a);
     }
+    
+    public void setText(String text) {
+    	this.text = text;
+    }
+    
+    public String getText() {
+    	return text;
+    }
 
     public void addAction(Action[] nActions) {
         actions.addAll(Arrays.asList(nActions));
+    }
+    
+    public List<Action> getActions(){
+    	return actions;
+    }
+    
+    public int getId() {
+    	return id;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Action {
@@ -7,7 +8,7 @@ public class Action {
 	private List<String> inputs;
 	private int nextScene;
 	
-	Action(int dmg, List<String> inpt, int nScene){
+	public Action(int dmg, List<String> inpt, int nScene){
 		damages = dmg;
 		inputs = inpt;
 		nextScene = nScene;
