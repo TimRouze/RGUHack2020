@@ -1,13 +1,14 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Action {
 	private int damages;
 	private List<String> inputs;
-	private Scene nextScene;
+	private int nextScene;
 	
-	Action(int dmg, List<String> inpt, Scene nScene){
+	public Action(int dmg, List<String> inpt, int nScene){
 		damages = dmg;
 		inputs = inpt;
 		nextScene = nScene;
@@ -29,13 +30,11 @@ public class Action {
 		this.inputs = inputs;
 	}
 
-	public Scene getNextScene() {
+	public int getNextScene() {
 		return nextScene;
 	}
 
-	public void setNextScene(Scene nextScene) {
+	public void setNextScene(int nextScene) {
 		this.nextScene = nextScene;
 	}
-	
-	
 }
