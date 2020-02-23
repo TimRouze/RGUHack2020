@@ -1,38 +1,38 @@
 [
     {
-        "id": "1",
+        "id": "0",
         "text": "Mich'mich is lying down on the sidewalk, alone.. It's raining and a strong wind is blowing.\nIt's 4pm and John, a 9 years old boy is coming, accompanied by what seems to be his older brother, Lenon, after a long day of school.\nBoth boys look excited, this sensation is enhanced by the rain, and the younger one is jumping into puddles. Suddenly, his eyes stop on our poor hero.\nWhat is happening?",
         "actions": [ 
             {
-                "nextScene": "2",
+                "nextScene": "1",
                 "inputs": ["take", "take the plush", "take it", "pick", "pick up"],
                 "damages": "0"
             },
             {
-                "nextScene": "3",
+                "nextScene": "2",
                 "inputs": ["leave the plush", "leave it", "leave"],
                 "damages": "0"
             },
             {
-                "nextScene": "4",
+                "nextScene": "3",
                 "inputs": ["jump on the plush", "jump on it", "jump"],
-                "damages": "3"
+                "damages": "6"
             }
         ],
         "sceneState": "NEUTRAL",
         "conditioned": false
     },
     {
-        "id": "2",
+        "id": "1",
         "text": "Oh great, poor Mich'mich is not alone anymore! Our two little boys are going back home with their new friend.\nDuring dinner, John presents his parents with their marvelous find. But Mich'mich is still wet and his beautiful fur, which once was white and cream, is now dirty and grey.\nJohn and Lennon's mother enters in a terrible fury: \"You must not pick up random stuff in the streets, even if it looks abandoned and pretty. You don't know where it comes from,\nand it can belong to someone who lost it. Tomorrow I want you both to put it back where you found it\".\nDisappointed, John goes to bed. After a good night and a delicious breakfast, the brothers head to the school and stop to the place they found Mich'mich the day before.\nWhat will the boys do?",
         "actions": [ 
             {
-                "nextScene": "5",
+                "nextScene": "4",
                 "inputs": ["put back", "put it back", "put the plush back", "put", "leave the plush", "leave it"],
                 "damages": "0"
             },
             {
-                "nextScene": "6",
+                "nextScene": "5",
                 "inputs": ["keep", "keep it", "keep the plush", "keep Mich'mich"],
                 "damages": "0"
             }
@@ -41,82 +41,98 @@
         "conditioned": false
     },
     {
-        "id": "5",
+        "id": "4",
         "text": "Heartbroken, John puts Mich'mich on a small wall and they leave. Once again, the poor \nlittle sheep is alone. Unfortunately, this day is garbage collection day. At 10am the waste \ntruck comes and the plush is taken into the waste disposal by the driver. Mich’mich is \ndrowned under tons of waste and is crushed. The damage is too great. He will never recover \nand joins plush Heaven.",
         "actions": [
             {
                 "nextScene": "-1",
                 "inputs": [],
-                "damage": "0"
+                "damages": "0"
             }
         ],
         "sceneState": "LOSE",
         "conditioned": false
     },
     {
-        "id": "6",
+        "id": "5",
         "text": "John tries negotiating to keep the plush but Lenon refuses and after a terrible argument \nthe little boy resigns, puts Mich'mich on a small wall and they leave. Once again, the poor \nlittle sheep is alone. Unfortunately, this day is garbage collection day. At 10am the waste \ntruck comes and the plush is taken into the waste disposal by the driver. Mich’mich is \ndrowned under tons of waste and is crushed. The damage is too great. He will never recover \nand joins plush heaven.",
         "actions": [
             {
                 "nextScene": "-1",
                 "inputs": [],
-                "damage": "0"
+                "damages": "0"
             }
         ],
         "sceneState": "LOSE",
         "conditioned": false
     },
     {
-        "id": "3",
-        "text": "John approaches to catch the plush but his brother stops him:  \\”Don’t touch this thing, it’s \ndirty and we’re getting late for our snack time”\\. Little John nods and they both leave, \nfollowing  their stomach growls.\nSuddenly, a gust of wind pushes Mich’mich onto the road just in front of Lance Armstrong \nwho was at the time on his bike fleeing from the sportive authorities.\nWhat is happening? \n",
+        "id": "2",
+        "text": "John approaches to catch the plush but his brother stops him:  \"Don’t touch this thing, it’s \ndirty and we’re getting late for our snack time\". Little John nods and they both leave, \nfollowing  their stomach growls.\nSuddenly, a gust of wind pushes Mich’mich onto the road just in front of Lance Armstrong \nwho was at the time on his bike fleeing from the sportive authorities.\nWhat is happening? \n",
         "actions": [
             {
-                "nextScene": "7",
+                "nextScene": "6",
                 "inputs": ["avoid", "avoid the plush", "break", "dodge"],
-                "damage": "0"
+                "damages": "0"
             },
             {
-                "nextScene": "8",
+                "nextScene": "7",
                 "inputs": ["fall", "fall down", "crash", "skid", "get out of control"],
-                "damage": "0"
+                "damages": "0"
             }
         ],
         "sceneState": "NEUTRAL",
         "conditioned": false
     },
     {
-        "id": "4",
+        "id": "3",
         "text": "Little John jumps on the plush without any remorse as if it was a simple waste. The boys \nare going back home, both singing in the rain and thinking about the snack that is awaiting \nthem at home. As the seam slowly unties, Mich’mich starts to lose his left ear.\nSuddenly, a gust of wind pushes Mich’mich onto the road just in front of Lance Armstrong \nwho was at the time on his bike fleeing from the sportive authorities.\nWhat is happening? \n",
         "actions": [
             {
-                "nextScene": "7",
+                "nextScene": "6",
                 "inputs": ["avoid", "avoid the plush", "break", "dodge"],
-                "damage": "0"
+                "damages": "0"
             },
             {
-                "nextScene": "8",
+                "nextScene": "7",
                 "inputs": ["fall", "fall down", "crash", "skid", "get out of control"],
-                "damage": "0"
+                "damages": "0"
             }
         ],
         "sceneState": "NEUTRAL",
         "conditioned": false
-
-
     },
     {
-        "id": "7",
+        "id": "6",
         "text": "Thanks to his incredible capacities, Lance manages to avoid Mich’mich despite the \nincredible speed his powerful legs make him cycle. Mister Armstrong still has the time to \nnotice the small and super cute plush that almost killed him. \nWhat will be his reaction?\n",
         "actions": [
             {
-                "nextScene": "9",
+                "nextScene": "8",
                 "inputs": ["leave", "leave the plush", "leave it"],
-                "damage": "0"
+                "damages": "0"
             },
             {
-                "nextScene": "10",
+                "nextScene": "9",
                 "inputs": ["stop", "take", "take it", "take the plush", "look", "look closer", "look at the plush", "stop here"],
-                "damage": "0"
+                "damages": "0"
+            }
+        ],
+        "sceneState": "NEUTRAL",
+        "conditioned": false
+    },
+    {
+        "id": "7",
+        "text": " Lance is going so fast on his bike that he can’t avoid the small plush. In a last desperate \neffort to stop his fast-approaching bike before reaching it, Mister Armstrong falls on the \nground, face to face with Mich’mich. His knees hurt pretty badly.  \nHow will Lance react to this?\n",
+        "actions": [
+            {
+                "nextScene": "10",
+                "inputs": ["angry", "hit", "hit the plush", "cry", "anger", "scream", "shout"],
+                "damages": "3"
+            },
+            {
+                "nextScene": "9",
+                "inputs": ["stop", "take", "take it", "take the plush", "look", "look closer", "look at the plush", "stop here"],
+                "damages": "0"
             }
         ],
         "sceneState": "NEUTRAL",
@@ -124,61 +140,56 @@
     },
     {
         "id": "8",
-        "text": " Lance is going so fast on his bike that he can’t avoid the small plush. In a last desperate \neffort to stop his fast-approaching bike before reaching it, Mister Armstrong falls on the \nground, face to face with Mich’mich. His knees hurt pretty badly.  \nHow will Lance react to this?\n",
-        "actions": [
-            {
-                "nextScene": "11",
-                "inputs": ["angry", "hit", "hit the plush", "cry", "anger", "scream", "shout"],
-                "damage": "3"
-            },
-            {
-                "nextScene": "10",
-                "inputs": ["stop", "take", "take it", "take the plush", "look", "look closer", "look at the plush", "stop here"],
-                "damage": "0"
-            }
-        ],
-        "sceneState": "NEUTRAL",
-        "conditioned": false
-    },
-    {
-        "id": "9",
         "text": "The following morning, Isaac and his mother are going to the boy’s school. On their road, \nthey find the little plush which seems to have suffered. Isaac’s mother is the tender of \nNational Plush Shelter of this neighbourhood, so she decides to take Mich’mich to the \nshelter to find him a new home. \n",
         "actions": [
             {
-                "nextScene": "12",
+                "nextScene": "11",
                 "inputs": [],
-                "damage": "0"
+                "damages": "0"
             },
             {
-                "nextScene": "13",
+                "nextScene": "12",
                 "inputs": [],
-                "damage": "0"
+                "damages": "0"
             }
         ],
         "sceneState": "NEUTRAL",
         "conditioned": true
     },
     {
-        "id": "12",
+        "id": "11",
         "text": "After examination it appears that the plush has been through too much damage and \ncannot be sold anymore. The decision is taken to throw him away, forever",
-        "action": [
+        "actions": [
             {
                 "nextScene": "-1",
                 "inputs": [],
-                "damage": "0"
+                "damages": "0"
             }
         ],
         "sceneState": "LOSE",
         "conditioned": false
     },
     {
-        "id": "13",
+        "id": "12",
         "text": "After examination, Isaac’s mother finds out that the plush is in a good enough state to be \nsold and puts Mich’mich into the shop window. Mich’mich’s human, who was desperate to \nsee their beloved plush again is walking around in their neighbourhood. As they pass in front \nof the NPS they visit regularly, something catches their eyes. Mich’mich was in the shop \nwindow, ready to be sold!  Such joy glows in the heart of this human as they take back the \ndesired one, hugging and swearing that now every bag will be equipped with a safety belt! \n<3.",
-        "action": [
+        "actions": [
             {
                 "nextScene": "-1",
                 "inputs": [],
-                "damage": "0"
+                "damages": "0"
+            }
+        ],
+        "sceneState": "WIN",
+        "conditioned": false
+    },
+    {
+        "id": "9",
+        "text": "Lance decides that the plush is sooo cute that he can’t leave it lying on the ground. \nHe brings it to the nearest National Plush Shelter with the hope that the person who lost it will \nfind it there.\nThe following day, the sun shines high in the sky. Mich’mich’s human, who was desperate to \nsee their beloved plush again is walking around in their neighbourhood. As they pass in front \nof the NPS they visit regularly, something catches their eyes. Mich’mich was in the shop \nwindow, ready to be sold!  Such joy glows in the heart of this human as they take back the \ndesired one, hugging and swearing that now every bag will be equipped with a safety belt! \n<3.",
+        "actions": [
+            {
+                "nextScene": "-1",
+                "inputs": [],
+                "damages": "0"
             }
         ],
         "sceneState": "WIN",
@@ -186,25 +197,12 @@
     },
     {
         "id": "10",
-        "text": "Lance decides that the plush is sooo cute that he can’t leave it lying on the ground. \nHe brings it to the nearest National Plush Shelter with the hope that the person who lost it will \nfind it there.\nThe following day, the sun shines high in the sky. Mich’mich’s human, who was desperate to \nsee their beloved plush again is walking around in their neighbourhood. As they pass in front \nof the NPS they visit regularly, something catches their eyes. Mich’mich was in the shop \nwindow, ready to be sold!  Such joy glows in the heart of this human as they take back the \ndesired one, hugging and swearing that now every bag will be equipped with a safety belt! \n<3.",
-        "action": [
-            {
-                "nextScene": "-1",
-                "inputs": [],
-                "damage": "0"
-            }
-        ],
-        "sceneState": "WIN",
-        "conditioned": false
-    },
-    {
-        "id": "11",
         "text": "Lance is so mad of falling because of a tiny and dirty plush that someone carelessly left \non the ground that he needs to hit it before leaving! Mich’mich is hurt pretty bad! His forelegs \nare starting to rip off…",
-            "action": [
+        "actions": [
             {
-                "nextScene": "9",
-                "inputs": [],
-                "damage": "0"
+                "nextScene": "8",
+                "inputs": [ "" ],
+                "damages": "3"
             }
         ],
         "sceneState": "NEUTRAL",

@@ -24,12 +24,13 @@ public class JSONLoader {
             JSONArray jsonArray = (JSONArray) object;
             jsonArray.forEach(o -> {
                 JSONObject obj = (JSONObject)o;
-                Scene scene = new Scene(Integer.parseInt((String)obj.get("id")), (String)obj.get("text"), SceneState.valueOf((String)obj.get("sceneState")));
+                Scene scene = new Scene(Integer.parseInt((String)obj.get("id")), (String)obj.get("text"), SceneState.valueOf((String)obj.get("sceneState")), (Boolean)obj.get("conditioned"));
                 JSONArray actions = (JSONArray)obj.get("actions");
                 actions.forEach(act -> {
                     JSONObject action = (JSONObject)act;
                     int dmg = Integer.parseInt((String)action.get("damages"));
                     int nextScene = Integer.parseInt((String)action.get("nextScene"));
+                    Object truc = action.get("conditioned");
                     List<String> inputs = new ArrayList<>();
                     ((JSONArray)action.get("inputs")).forEach(input -> {
                         inputs.add((String)input);

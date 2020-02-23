@@ -18,23 +18,21 @@ public class Action {
 		return damages;
 	}
 
-	public void setDamages(int damages) {
-		this.damages = damages;
-	}
 
 	public List<String> getInputs() {
 		return inputs;
-	}
-
-	public void setInputs(List<String> inputs) {
-		this.inputs = inputs;
 	}
 
 	public int getNextScene() {
 		return nextScene;
 	}
 
-	public void setNextScene(int nextScene) {
-		this.nextScene = nextScene;
+	@Override
+	public String toString() {
+		return "Action{" +
+				"damages=" + damages +
+				", inputs=" + inputs +
+				", nextScene=" + nextScene +
+				'}';
 	}
 }
