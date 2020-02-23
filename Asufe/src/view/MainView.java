@@ -4,14 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
@@ -41,9 +50,12 @@ public class MainView extends Application{
 		window.setTitle("A Series of (un)Fortunate Events");
 		Text gameTitle = new Text("A Series of (un)Fortunate Events");
 		gameTitle.setStyle("-fx-fill: white;");
+		gameTitle.setTextAlignment(TextAlignment.CENTER);
 		Text instructions = new Text("Type in 'start'");
+		instructions.setTextAlignment(TextAlignment.CENTER);
 		instructions.setStyle("-fx-fill: white;");
 		TextField userInput = new TextField();
+		userInput.setStyle("-fx-background-color: darkgrey; -fx-border-color: black;");
 		GridPane menuLayout = new GridPane();
 		menuLayout.setMinSize(500, 400);
 		menuLayout.setVgap(50);
@@ -68,6 +80,7 @@ public class MainView extends Application{
 
 	public void initGameScene() {
     	model.Scene intro = JSONLoader.getIntro("resources/intro.json");
+    	model.Scene rules = JSONLoader.getIntro("resources/rules.json");
     	game = new Game(new Player("Mich'mich", 10), scenes);
     	action = new Action(0, null, 0);
     	
@@ -81,20 +94,26 @@ public class MainView extends Application{
 		gameText.setText(intro.toString());
 		gameText.setStyle("-fx-fill: white; -fx-font-size: 18;");
 		gameText.setTextAlignment(TextAlignment.CENTER);
+		Text rulesText = new Text();
+		rulesText.setText(rules.toString());
+		rulesText.setFill(Color.WHITE);
+		rulesText.setTextAlignment(TextAlignment.CENTER);
+		rulesText.setFont(Font.font("Verdanna", FontPosture.ITALIC, 18));
 		userGameInput = new TextField();
-		userGameInput.setStyle("-fx-background-color: black; -fx-fill: white; -fx-border-color: white;");
-		GridPane gameLayout = new GridPane();
-		gameLayout.setMinSize(500, 400);
-		gameLayout.setVgap(30);
-		gameLayout.setAlignment(Pos.CENTER);
-		gameLayout.add(gameText, 1, 0);
-		gameLayout.add(userGameInput, 1, 2);
-		gameLayout.add(tryAgainBtn, 1, 2);
+		userGameInput.setStyle("-fx-background-color: darkgrey; -fx-border-color: black;");
+		VBox gameLayout = new VBox();
+		gameLayout.setMinSize(500, 600);
 		gameLayout.setStyle("-fx-background-color: black;");
+		//gameLayout.setStyle("-fx-background-image: url('view/Scene1.jpg'); -fx-background-position: center center; -fx-background-repeat: stretch; -fx-background-color: black;");
+		gameLayout.setMargin(gameText, new Insets(30, 20, 50, 20));
+		gameLayout.setAlignment(Pos.CENTER);
+		ObservableList list = gameLayout.getChildren();
+		list.addAll(gameText, rulesText, userGameInput, tryAgainBtn);
 		gameScene = new Scene(gameLayout);
 		gameScene.addEventHandler(KeyEvent.KEY_PRESSED, (key) -> {
 		      if(key.getCode()==KeyCode.ENTER) {
 		          String uInput = userGameInput.getText().toLowerCase().trim();
+		          rulesText.setVisible(false);
 		          userGameInput.clear();
 		          gameText.setText(game.getScene(action).toString());
 		          if(game.getCurrentScene().isConditioned()) {
@@ -111,6 +130,7 @@ public class MainView extends Application{
 		        	  userGameInput.setVisible(false);
 		          }
 		          action = game.guessAction(uInput);
+		          uInput = "";
 		      }
 		});
 	}
